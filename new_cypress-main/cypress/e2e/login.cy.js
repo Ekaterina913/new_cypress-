@@ -62,7 +62,7 @@ describe("Проверка авторизации", function () {
     cy.get(main_page.password).type(data.password); ///Найти поле пароль и вести правильный пароль
     cy.get(main_page.login_button).click(); ///Нажать войти
 
-    cy.get(result_page.title).contains("Такого логина или пароля нет"); ///Проверка, что элемент содержит текст
+    cy.get(result_page.title).contains("Авторизация прошла успешно"); ///Проверка, что элемент содержит текст
     cy.get(result_page.title).should("be.visible"); ///Текст виден пользователю
   });
 });
